@@ -300,6 +300,14 @@ public class calculate4 {
 		frame.getContentPane().add(btn2);
 		
 		JButton btn0 = new JButton("0");
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String number=textField.getText()+btn0.getText();
+				textField.setText(number);
+				
+			}
+			
+		});
 		btn0.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btn0.setBounds(91, 463, 152, 48);
 		frame.getContentPane().add(btn0);
@@ -385,12 +393,8 @@ public class calculate4 {
 		JButton btnNewButton_1_3_6_1 = new JButton(".");
 		btnNewButton_1_3_6_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				StringBuilder stringBuilder = new StringBuilder();
-				stringBuilder.append(textField.getText());
-				stringBuilder.append(btn3.getText());
-				@SuppressWarnings("unused")
-				String number =stringBuilder.toString();
-				textField.setText(null);
+				String number=textField.getText()+btnNewButton_1_3_6_1.getText();
+				textField.setText(number);
 				
 			}
 			
